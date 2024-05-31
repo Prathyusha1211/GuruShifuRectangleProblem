@@ -16,7 +16,7 @@ public class RectangleTest {
         @DisplayName("Actual and Expected Area of Rectangle Matches")
         public void shouldReturnAreaOf12WhenLengthIs3AndBreadthIs4(){
             int ExpectedArea = 12;
-            int ActualArea = obj.getAreaOfRectangle(3,4);
+            int ActualArea = obj.areaOfRectangle(3,4);
             assertThat(ActualArea,is(ExpectedArea));
         }
 
@@ -24,14 +24,14 @@ public class RectangleTest {
         @DisplayName("Actual and Expected Area of Rectangle doesn't Matches")
         public void shouldReturnAreaOf14WhenLengthIs3AndBreadthIs4(){
             int ExpectedArea = 14;
-            int ActualArea = obj.getAreaOfRectangle(3,5);
+            int ActualArea = obj.areaOfRectangle(3,5);
             assertThat(ActualArea,is(not(ExpectedArea)));
         }
 
         @Test()
         @DisplayName("Throws error when any input parameter is negative")
         public void shouldReturnExceptionWhenLengthOrBreadthGivenNegative(){
-            assertThrows(IllegalArgumentException.class,()->obj.getAreaOfRectangle(-3,9));
+            assertThrows(IllegalArgumentException.class,()->obj.areaOfRectangle(-3,9));
         }
 
     
