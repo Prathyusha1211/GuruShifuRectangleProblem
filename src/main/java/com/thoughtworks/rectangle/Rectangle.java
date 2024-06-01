@@ -1,11 +1,20 @@
 package com.thoughtworks.rectangle;
 
 public class Rectangle{
-    int area(int length, int breadth)
-    {
+    private final double length;
+    private final double breadth;
+    Rectangle(double length, double breadth){
+        
+
         if(length<0 || breadth<0){
             throw new IllegalArgumentException();
         }
-        return length*breadth;
+        this.length = length;
+        this.breadth = breadth;
+
+        
     }
+    public double area(){
+        return length*breadth;
+     }
 }
