@@ -34,4 +34,14 @@ public class RectangleTest {
             double ActualArea = obj.area();
             assertThat(ActualArea,is(closeTo(19.11,0.001)));
         } 
+
+        @Test
+        @DisplayName("Actual and Expected Area of Rectangle Matches")
+        public void shouldReturnPerimeterOf14WhenLengthIs3AndBreadthIs4(){
+            Rectangle obj = new Rectangle(3,4); 
+            double ActualPerimeter = obj.perimeter();
+            assertThat(ActualPerimeter,is(closeTo(14,0.0001))); 
+        }
+
+
 }
